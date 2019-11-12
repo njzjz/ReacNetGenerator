@@ -63,7 +63,7 @@ def dps_reaction(reactdict):
             st.push(0)
             while True:
                 side, mol = st.pop(), st.pop()
-                if mol < 0:
+                if mol < -1:
                     break
                 elif mol in visited[side]:
                     continue

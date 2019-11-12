@@ -5,7 +5,7 @@ extern "C"{
 C_Stack::C_Stack() {
     tail = new Node;
     tail->prev = NULL;
-    tail->val = -1;
+    tail->val = -2;
 };
 
 C_Stack::~C_Stack() {
