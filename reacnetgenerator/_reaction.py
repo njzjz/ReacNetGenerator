@@ -45,8 +45,10 @@ class ReactionsFinder(SharedRNGData):
             reactdict[1][mol[1]].append(mol[0])
             if mol[2]:
                 reactdict[0][mol[0]].append(self.CONFLICT)
+                reactdict[1][self.CONFLICT].append(mol[0])
             if mol[3]:
                 reactdict[1][mol[1]].append(self.CONFLICT)
+                reactdict[0][self.CONFLICT].append(mol[1])
         networks = dps_reaction(reactdict)
         # remove empty AND conflict
         new_networks = []
